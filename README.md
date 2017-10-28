@@ -57,11 +57,17 @@ def normalize(x):
     return y
 ```
 
+Since the result of the network training turns out to be ok, no further pre-processing steps were done on the data set.
+
 #### Model Architecture
 
 The neural network architecture used in the project is based on the [LeNet-5](http://yann.lecun.com/exdb/lenet/) neural network architecture.
 
 The LeNet architecture is a well known architecture for image recognition. "LeNet is small and easy to understand — yet large enough to provide interesting results." That's the reason we choose LeNet as the first architecture to try on the Traffic Signs data set.
+
+In addition, 3 drop out layers were used between the fully connected areas to improve performance of the network.
+
+The details of the model is as follows:
 
 | Layer | Description |
 | ----- | ----- |
@@ -94,6 +100,9 @@ The model is trained using these hyperparamters:
 4. keep probabilities = 0.5
 5. optimizer = AdamOptimizer
 
+These hyperparamter values are the initial values I chose. I found that changing the number of fully connected layers, adding the drop out layers, and changing the number of neurons in each layer has a greater impact on the performance of this network.
+
+
 #### Solution Approach
 
 The final model results were:
@@ -120,7 +129,7 @@ The test images are:
 
 5. traffic-5.jpg ![Test 5](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-5.jpg "Test 5")
 
-The 5 test images are taken from various sources, and are originally part of a much larger image. They are cropped and resized to 32x32, with the traffic sign taking up more the half the area of the whole image. This make them structurally similar to our training images. So we'll expect the model to at least identify some of the images correctly.
+The 5 test images are taken from various sources, and are originally parts of much larger images. They are cropped and resized to 32x32, with the traffic sign taking up more the half the area of the whole image. This make them structurally similar to our training images. So we'll expect the model to at least identify some of the images correctly.
 
 #### Performance on New Images
 
