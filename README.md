@@ -2,6 +2,17 @@
 
 ## Project 2: Traffic Sign Classifier
 
+Project Jupyter Notebook: Traffic_Sign_Classifier.ipynb
+
+Notebook HTML snapshot: report.html
+
+Test Images:
+1. traffic-1.jpg
+2. traffic-2.jpg
+3. traffic-3.jpg
+4. traffic-4.jpg
+5. traffic-5.jpg
+
 ### Introduction
 
 The goals / steps of this project are the following:
@@ -87,11 +98,44 @@ The model is trained using these hyperparamters:
 
 The final model results were:
 
-1. validation set accuracy = 95.9%
-2. test set accuracy = 94.9%
+1. validation set accuracy = 95.5%
+2. test set accuracy = 94.8%
 
 ### Test a Model on New Images
 
 #### Acquiring New Images
 
 Five new German Traffic signs were downloaded from the web, cropped and resized to 32x32.
+
+The test images are:
+1. traffic-1.jpg ![Test 1](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-1.jpg "Test 1")
+
+2. traffic-2.jpg ![Test 2](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-2.jpg "Test 2")
+
+3. traffic-3.jpg ![Test 3](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-3.jpg "Test 3")
+
+
+4. traffic-4.jpg ![Test 4](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-4.jpg "Test 4")
+
+
+5. traffic-5.jpg ![Test 5](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-5.jpg "Test 5")
+
+The 5 test images are taken from various sources, and are originally part of a much larger image. They are cropped and resized to 32x32, with the traffic sign taking up more the half the area of the whole image. This make them structurally similar to our training images. So we'll expect the model to at least identify some of the images correctly.
+
+#### Performance on New Images
+
+| Filename | Image | Correct Label | Correct Description | Prediction Label | Prediction Description |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| traffic-1.jpg | ![Test 1](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-1.jpg "Test 1") | | | 38 |Keep right |
+| traffic-2.jpg | ![Test 2](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-2.jpg "Test 2") | | | 33 | Turn right ahead |
+| traffic-3.jpg | ![Test 3](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-3.jpg "Test 3") | | | 17 | No entry |
+| traffic-4.jpg | ![Test 4](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-4.jpg "Test 4") | | | 36 | Go straight or right |
+| traffic-5.jpg | ![Test 5](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-5.jpg "Test 5") | | | 14 | Stop |
+
+Predictions of images 2,3,5 is correct. Accuracy is 60%
+
+A test of only 5 images is too few to make any meaningful conclusion on the results. This performance on the new images cannot be meaningfully compared to the accuracy results of the test set.
+
+#### Model Certainty - Softmax Probabilities
+
+The top 5 softmax probabilities for each image is also printed in the Jupyter Notebook.
