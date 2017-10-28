@@ -126,16 +126,20 @@ The 5 test images are taken from various sources, and are originally part of a m
 
 | Filename | Image | Correct Label | Correct Description | Prediction Label | Prediction Description |
 | ----- | ----- | ----- | ----- | ----- | ----- |
-| traffic-1.jpg | ![Test 1](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-1.jpg "Test 1") | | | 38 |Keep right |
-| traffic-2.jpg | ![Test 2](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-2.jpg "Test 2") | | | 33 | Turn right ahead |
-| traffic-3.jpg | ![Test 3](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-3.jpg "Test 3") | | | 17 | No entry |
-| traffic-4.jpg | ![Test 4](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-4.jpg "Test 4") | | | 36 | Go straight or right |
-| traffic-5.jpg | ![Test 5](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-5.jpg "Test 5") | | | 14 | Stop |
+| traffic-1.jpg | ![Test 1](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-1.jpg "Test 1") | 1 | Speed limit (30km/h)| 1 | Speed limit (30km/h) |
+| traffic-2.jpg | ![Test 2](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-2.jpg "Test 2") | 33 | Turn right ahead | 33 | Turn right ahead |
+| traffic-3.jpg | ![Test 3](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-3.jpg "Test 3") | 17 | No entry | 17 | No entry |
+| traffic-4.jpg | ![Test 4](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-4.jpg "Test 4") | 25 | Road work | 36 | Go straight or right |
+| traffic-5.jpg | ![Test 5](https://github.com/ongchinkiat/SDCND-Project2/raw/master/traffic-5.jpg "Test 5") | 14 | Stop | 14 | Stop |
 
-Predictions of images 2,3,5 is correct. Accuracy is 60%
+Predictions of images 1,2,3,5 is correct. Accuracy is 80%
 
 A test of only 5 images is too few to make any meaningful conclusion on the results. This performance on the new images cannot be meaningfully compared to the accuracy results of the test set.
 
 #### Model Certainty - Softmax Probabilities
 
 The top 5 softmax probabilities for each image is also printed in the Jupyter Notebook.
+
+For images 1-4, the top prediction result has a softmax probability of 1.0000, with the rest of the probabilities all lower than 0.0001.
+
+For image 5, the top prediction result has a softmax probability of 0.937, the 2nd 0.039, 3rd 0.022, and the rest lower than 0.001.
