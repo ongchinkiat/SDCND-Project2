@@ -152,3 +152,5 @@ The top 5 softmax probabilities for each image is also printed in the Jupyter No
 For images 1-4, the top prediction result has a softmax probability of 1.0000, with the rest of the probabilities all lower than 0.0001.
 
 For image 5, the top prediction result has a softmax probability of 0.937, the 2nd 0.039, 3rd 0.022, and the rest lower than 0.001.
+
+The model is very certain on all 5 predictions.
